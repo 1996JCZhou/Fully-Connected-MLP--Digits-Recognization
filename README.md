@@ -11,3 +11,19 @@ In addition to the core implementation, I introduce PyQt5, a versatile toolkit, 
 The training dataset used to optimize the model parameters is sourced from the MNIST dataset. As for testing the model's performance, a portion of the test dataset comes from MNIST, while the other portion is comprised of user-input handwritten digit images drawn directly on the computer touchpad.
 
 Through this project, I not only gained valuable insights into machine learning and computer vision but also honed my skills in building custom neural networks and creating interactive graphical interfaces.
+
+## Requirements
+- python
+- PyQt5
+- numpy
+- struct
+- matplotlib
+- pathlib
+- Pil
+- Layout
+- PaintBoard
+- math
+- copy
+- pickle
+
+## Results
