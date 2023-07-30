@@ -16,7 +16,7 @@ class Net:
         self.batch_size = 100 if Batch_size is None else Batch_size
         self.epoch = 10       if Epoch      is None else Epoch
 
-    '''Initialisierung von Gewichtungen und Bias'''
+    """Initialisierung von Gewichtungen und Bias"""
     def init_parameters_b(self, layer):
         # self.distribution - layer - vordefinierter Anfangswertsumfang von Bias
         dist = self.distribution[layer]['b']
@@ -73,7 +73,7 @@ class Net:
                     print('Bias b im {}. Layer: {}'.format(i+1, self.parameters[i]['b'].shape))
                     continue  
         print('\n')
-                
+
     """Normalisierung"""
     def gaussian(self, x):
         # x: 2D np.array/Matrix
@@ -345,76 +345,6 @@ class Net:
             self.test_accuracy(train_images, true_train_labels, self.parameters)
             self.test_accuracy(test_images, true_test_labels, self.parameters)
             print('\n')
-
-        """
-        for epoch in range(self.epoch):
-            # 学习完每一个batch, 即向最优解/最优参数'走一步'。
-            # 总共要'走(train_images.shape[0]//self.batch_size=)600步'。
-            row_train_img = np.arange(train_images.shape[0])
-            for i in range(train_images.shape[0]//self.batch_size):
-                if i%100==99:
-                    print('Running batch: {}/{}'.format(i+1, train_images.shape[0]//self.batch_size))
-                # 打乱原先训练图集的行的序列, 并返回
-                np.random.shuffle(row_train_img)
-                # 在打乱的行的序列中抽取batch_size个训练图片, 用于训练神经网络。
-                self.parameters = self.training_net(train_images[row_train_img[0:self.batch_size]], true_train_labels[row_train_img[0:self.batch_size]], 10**(-1.5))
-                
-            # 每一次迭代后测试神经网络数字识别的正确性。
-            # loss_fun_accu_train = self.cross_Entropy(train_images, true_train_labels, self.parameters)
-            # print('在第{}次迭代后, loss function在训练集中累加的结果为{}。'.format(epoch+1, loss_fun_accu_train))
-            # loss_fun_accu_test = self.cross_Entropy(test_images, true_test_labels, self.parameters)
-            # print('在第{}次迭代后, loss function在测试集中累加的结果为{}。'.format(epoch+1, loss_fun_accu_test))
-            
-            self.test_accuracy(train_images, true_train_labels, self.parameters)
-            self.test_accuracy(test_images, true_test_labels, self.parameters)
-            print('\n')
-        """
-
-        """
-        for epoch in range(self.epoch):
-            # 学习完每一个batch, 即向最优解/最优参数'走一步'。
-            # 总共要'走(train_images.shape[0]//self.batch_size=)600步'。
-            row_train_img = np.arange(train_images.shape[0])
-            for i in range(train_images.shape[0]//self.batch_size):
-                if i%100==99:
-                    print('Running batch: {}/{}'.format(i+1, train_images.shape[0]//self.batch_size))
-                # 打乱原先训练图集的行的序列, 并返回
-                np.random.shuffle(row_train_img)
-                # 在打乱的行的序列中抽取batch_size个训练图片, 用于训练神经网络。
-                self.parameters = self.training_net(train_images[row_train_img[0:self.batch_size]], true_train_labels[row_train_img[0:self.batch_size]], 10**(-1.6))
-                
-            # 每一次迭代后测试神经网络数字识别的正确性。
-            # loss_fun_accu_train = self.cross_Entropy(train_images, true_train_labels, self.parameters)
-            # print('在第{}次迭代后, loss function在训练集中累加的结果为{}。'.format(epoch+1, loss_fun_accu_train))
-            # loss_fun_accu_test = self.cross_Entropy(test_images, true_test_labels, self.parameters)
-            # print('在第{}次迭代后, loss function在测试集中累加的结果为{}。'.format(epoch+1, loss_fun_accu_test))
-            
-            self.test_accuracy(train_images, true_train_labels, self.parameters)
-            self.test_accuracy(test_images, true_test_labels, self.parameters)
-            print('\n')
-
-        for epoch in range(self.epoch):
-            # 学习完每一个batch, 即向最优解/最优参数'走一步'。
-            # 总共要'走(train_images.shape[0]//self.batch_size=)600步'。
-            row_train_img = np.arange(train_images.shape[0])
-            for i in range(train_images.shape[0]//self.batch_size):
-                if i%100==99:
-                    print('Running batch: {}/{}'.format(i+1, train_images.shape[0]//self.batch_size))
-                # 打乱原先训练图集的行的序列, 并返回
-                np.random.shuffle(row_train_img)
-                # 在打乱的行的序列中抽取batch_size个训练图片, 用于训练神经网络。
-                self.parameters = self.training_net(train_images[row_train_img[0:self.batch_size]], true_train_labels[row_train_img[0:self.batch_size]], 10**(-1.7))
-                
-            # 每一次迭代后测试神经网络数字识别的正确性。
-            # loss_fun_accu_train = self.cross_Entropy(train_images, true_train_labels, self.parameters)
-            # print('在第{}次迭代后, loss function在训练集中累加的结果为{}。'.format(epoch+1, loss_fun_accu_train))
-            # loss_fun_accu_test = self.cross_Entropy(test_images, true_test_labels, self.parameters)
-            # print('在第{}次迭代后, loss function在测试集中累加的结果为{}。'.format(epoch+1, loss_fun_accu_test))
-            
-            # self.test_accuracy(train_images, true_train_labels, self.parameters)
-            # self.test_accuracy(test_images, true_test_labels, self.parameters)
-            # print('\n')
-        """
 
         # 返回训练完的参数列表
         return self.parameters
