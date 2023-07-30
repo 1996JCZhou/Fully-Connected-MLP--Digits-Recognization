@@ -27,7 +27,7 @@ Through this project, I not only gained valuable insights into machine learning 
 - pickle
 
 ## Results
-Mode 1 - Random pick one picture from MNIST test set
+**Mode 1 - Random pick one picture from MNIST test set**
 
 ![image](https://github.com/1996JCZhou/Fully-Connected-MLP--Digits-Recognization/blob/master/Result%20examples/Mode%201%20-%20Random%20pick%20one%20picture%20from%20MNIST%20test%20set%201.PNG)
 
@@ -35,7 +35,7 @@ Mode 1 - Random pick one picture from MNIST test set
 
 ![image](https://github.com/1996JCZhou/Fully-Connected-MLP--Digits-Recognization/blob/master/Result%20examples/Mode%201%20-%20Random%20pick%20one%20picture%20from%20MNIST%20test%20set%203.PNG)
 
-Mode 2 - Draw one digit in the Input Data Space
+**Mode 2 - Draw one digit in the Input Data Space**
 
 ![image](https://github.com/1996JCZhou/Fully-Connected-MLP--Digits-Recognization/blob/master/Result%20examples/Mode%202%20-%20Draw%20one%20digit%20in%20the%20Input%20Data%20Space%201.PNG)
 
